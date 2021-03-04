@@ -1,0 +1,6 @@
+# pcomputation::build::bazel
+
+package(
+    default_visibility = ["//visibility:public"],
+    licenses = ["notice"],
+)

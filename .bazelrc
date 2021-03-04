@@ -1,0 +1,30 @@
+###############################################################################
+# Aliases                                                            [ Config ]
+
+###############################################################################
+# Toolchains                                                         [ Config ]
+
+register_toolchains(
+
+)
+
+###############################################################################
+# Flags                                                              [ Config ]
+
+build --cxxopt="-std=c++20"
+
+build:debug --compilation_mode="dbg"
+build:debug --cxxopt="-Wall"
+build:debug --cxxopt="-Wextra"
+build:debug --cxxopt="-Wpedantic"
+
+build:release --compilation_mode="opt"
+build:release --cxxopt="-Wall"
+build:release --cxxopt="-Wextra"
+build:release --cxxopt="-Wpedantic"
+
+###############################################################################
+# .bazelrc workspace & user overrides                                 [ Bazel ]
+
+try-import %workspace/configured.bazelrc
+try-import %workspace/user.bazelrc
