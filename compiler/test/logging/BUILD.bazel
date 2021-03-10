@@ -1,4 +1,4 @@
-# andromeda::andromeda::test::core
+# andromeda::andromeda::test::logging
 
 package(
     default_visibility = ["//visibility:public"],
@@ -6,12 +6,13 @@ package(
 )
 
 cc_test(
-    name = "utilities",
+    name = "log",
     srcs = [
-        "utilities.cc",
+        "log.cc",
     ],
     deps = [
         "@gtest",
         "@gtest//:gtest_main",
+        "@pcomputation//compiler/logging:log",
     ],
 )
