@@ -28,7 +28,7 @@
 
 ## Features
 
-## Installation <img src="https://img.shields.io/buildkite/60c98de5f1a7a620eebcb42abddcb9cc68c4cff7cea74d09fd?style=for-the-badge&label=Build" align="right" alt="Build status badge" />
+## Installation <img src="https://img.shields.io/buildkite/ecfd45e5452f5af226d208165e757e77912583b7b6c130531f?style=for-the-badge&label=Build" align="right" alt="Build status badge" />
 
 *P* is currently only available from source via [Bazel][bazel-build] (v 4.0.0) for multi-platform compilation and scaling. The build is configurable with the following flags:
 
