@@ -15,7 +15,10 @@ cc_binary(
     name = "main",
     srcs = ["main.cc"],
     copts = [],
-    deps = ["core"],
+    linkopts = ["-pthread"],
+    deps = [
+        "@pcomputation//compiler/logging:log",
+    ],
 )
 
 exports_files(["LICENSE"])
