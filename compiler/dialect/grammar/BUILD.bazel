@@ -1,4 +1,4 @@
-# pcomputation::compiler::utilities
+# pcomputation::compiler::dialect::grammer
 
 package(
     default_visibility = ["//visibility:public"],
@@ -7,7 +7,6 @@ package(
 
 # https://docs.bazel.build/versions/master/be/c-cpp.html#cc_library
 cc_library(
-    name = "error",
-    hdrs = ["error.hpp"],
-    deps = ["@pcomputation//compiler/logging:log"],
+    name = "elements",
+    hdrs = ["elements.inl"],
 )

@@ -1,48 +1,43 @@
-namespace Symbol {
-    namespace Operator {
-        enum class Unary {
-            Negate,
-            Rotate,
-            Invert,
-            Union,
-            Intersect,
-        };
-        enum class Binary {
-            Sum,
-            Product,
-            Quotient,
-        };
-        enum class Ternary {
+#pragma once
 
-        };
-        enum class Variadic {
-
-        };
-    } /* Operator */
-    namespace Control {
-        enum class Initial {
-            Paren,
-            Brace,
-            Bracket,
-        };
-        enum class Seperator {
-            Comma,
-            Colon,
-            Semicolon,
-        };
-        enum class Terminal {
-            Paren,
-            Brace,
-            Bracket,
-        };
-        enum class Block {
-            Do,
-            While,
-            For,
-            If,
-            Elif,
-            Else,
-            Return,
-        };
-    }; /* Control */
-} /* Symbol */
+namespace P {
+    enum class Symbol {
+        /* Element */
+        Identifier,
+        /* Operator */
+        /* Unary */
+        Negate,
+        Rotate,
+        Invert,
+        /* Binary */
+        Sum,
+        Product,
+        Quotient,
+        Union,
+        Intersect,
+        Assign,
+        /* Ternary */
+        /* Variadic */
+        /* Control*/
+        /* Initial */
+        I_Paren,
+        I_Brace,
+        I_Bracket,
+        /* Internal */
+        Comma,
+        Colon,
+        Semicolon,
+        /* Terminal */
+        T_Paren,
+        T_Brace,
+        T_Bracket,
+        /* Block */
+        Do,
+        While,
+        For,
+        If,
+        Elif,
+        Else,
+        Return,
+    };
+} /* P */
