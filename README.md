@@ -28,7 +28,7 @@
 
 ## Features
 
-## Installation <img src="https://img.shields.io/buildkite/ecfd45e5452f5af226d208165e757e77912583b7b6c130531f?style=for-the-badge&label=Build" align="right" alt="Build status badge" />
+## Installation
 
 *P* is currently only available from source via [Bazel][bazel-build] (v 4.0.0) for multi-platform compilation and scaling. The build is configurable with the following flags:
 
@@ -65,7 +65,7 @@ You may also test the current implementation for your configuration:
 
 - `bazel test '...' --config=(debug|release) --config=(asan|msan|ubsan|tsan)`
 
-The latest test evaluation is continuously integrated on [Buildkite][buildkite]. To build specific projects (compiler, docs, etc) specify '...' to target directory.
+To build specific projects (compiler, docs, etc) specify '...' to target directory { "@pcomputation//compiler", "@pcomputation//docs" }.
 
 <div align="center">Refer to the platform specific instructions if necessary.</div>
 
