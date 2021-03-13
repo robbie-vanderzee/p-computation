@@ -7,13 +7,13 @@
 namespace P {
     class Error {
       public:
-        Error(std::string message) : m_Message(message) {
+        Error(const std::string message) : m_Message(message) {
 
         }
         void emit() {
             P_ERROR("{0}", m_Message);
         }
       private:
-        std::string m_Message;
+        const std::string m_Message;
     };
 }

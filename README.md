@@ -28,6 +28,41 @@
 
 ## Features
 
+### Implemented
+
+### Unimplemented
+
+<table>
+   <tr>
+      <td>
+         Priority
+      </td>
+      <td>
+         Name
+      </td>
+      <td>
+         Description
+      </td>
+      <td>
+         Challenges
+      </td>
+   </tr>
+   <tr>
+      <td>
+         0
+      </td>
+      <td>
+         P Modules
+      </td>
+      <td>
+         Implement P Modules language to export file structures
+      </td>
+      <td>
+         Requires filesystem management.
+      </td>
+   </tr>
+</table>
+
 ## Installation
 
 *P* is currently only available from source via [Bazel][bazel-build] (v 4.0.0) for multi-platform compilation and scaling. The build is configurable with the following flags:

@@ -1,17 +1,6 @@
-# andromeda::andromeda::test::core
+# pcomputation::compiler::test::utilities
 
 package(
     default_visibility = ["//visibility:public"],
     licenses = ["notice"],
-)
-
-cc_test(
-    name = "utilities",
-    srcs = [
-        "utilities.cc",
-    ],
-    deps = [
-        "@gtest",
-        "@gtest//:gtest_main",
-    ],
 )

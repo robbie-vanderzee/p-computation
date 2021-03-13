@@ -1,4 +1,4 @@
-# pcomputation::compiler::utilities
+# pcomputation::compiler::test::dialect
 
 package(
     default_visibility = ["//visibility:public"],

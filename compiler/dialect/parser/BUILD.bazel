@@ -13,6 +13,6 @@ cc_library(
     deps = [
         "@pcomputation//compiler/dialect/grammar:elements",
         "@pcomputation//compiler/logging:log",
-        "@pcomputation//compiler/utilities:error",
+        "@pcomputation//compiler/utilities/interface:error",
     ],
 )

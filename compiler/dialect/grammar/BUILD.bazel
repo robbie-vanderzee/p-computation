@@ -9,4 +9,7 @@ package(
 cc_library(
     name = "elements",
     hdrs = ["elements.inl"],
+    deps = [
+        "@pcomputation//compiler/utilities/structure:bitmask",
+    ],
 )

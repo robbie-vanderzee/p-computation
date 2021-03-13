@@ -1,0 +1,13 @@
+# pcomputation::compiler::utilities::structure
+
+package(
+    default_visibility = ["//visibility:public"],
+    licenses = ["notice"],
+)
+
+# https://docs.bazel.build/versions/master/be/c-cpp.html#cc_library
+cc_library(
+    name = "bitmask",
+    hdrs = ["bitmask.inl"],
+    deps = ["@pcomputation//compiler:core"],
+)
