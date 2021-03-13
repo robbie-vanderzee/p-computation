@@ -57,7 +57,7 @@
 
 - `bazel build '...' --config=(debug|release) --config(asan|msan|ubsan|tsan)`
 
-The project will be built to `bazel-bin/pcompuation/`.
+The project will be built to `bazel-bin/{compiler, docs, ...}`.
 
 You may also test the current implementation for your configuration:
 

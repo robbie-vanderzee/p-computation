@@ -1,0 +1,28 @@
+name: P-computation Continuous Integration
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, which is the CWD for
+    # the rest of the steps
+    - uses: actions/checkout@v2
+      with:
+        submodules: 'true'
+    # Caches and restores the bazel build directory.
+    - name: Cache bazel build results
+      uses: actions/cache@v2.0.0
+      env:
+        cache-name: bazel-cache
+      with:
+        path: ~/.cache/bazel
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ github.ref }}
+        restore-keys: |
+          ${{ runner.os }}-${{ env.cache-name }}-master
+    - name: bazel build
+      run: bazel build --config=debug --show_progress_rate_limit=5 --curses=yes --color=yes --terminal_columns=143 --show_timestamps --verbose_failures --jobs=24 --announce_rc //...
+    - name: bazel test
+      run: bazel test --config=debug --flaky_test_attempts=3 --build_tests_only --local_test_jobs=12 --show_progress_rate_limit=5 --curses=yes --color=yes --terminal_columns=143 --show_timestamps --verbose_failures --jobs=24 --announce_rc //...
