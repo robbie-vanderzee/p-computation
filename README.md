@@ -100,7 +100,7 @@ You may also test the current implementation for your configuration:
 
 - `bazel test '...' --config=(debug|release) --config=(asan|msan|ubsan|tsan)`
 
-To build specific projects (compiler, docs, etc) specify '...' to target directory { "@pcomputation//compiler", "@pcomputation//docs" }.
+To build specific projects (`compiler`, `docs`, `etc`) specify `'...'` to target directory `{` `"@pcomputation//compiler"`, `"@pcomputation//docs"` `}`.
 
 <div align="center">Refer to the platform specific instructions if necessary.</div>
 
