@@ -11,13 +11,12 @@
 
 namespace P {
     class Parser {
+      public:
         class Manager;
       public:
-        Parser(std::filesystem::path owner) : m_Owner(owner) {}
+        Parser(std::filesystem::path owner);
+        void load();
 
-        void load() {
-            P_ASSERT(!m_Owner.empty(), "Invalid filepath provided to parser: {0} | empty or corrupt.", m_Owner);
-        }
       private:
         std::vector<P::Element> m_Elements;
         std::filesystem::path m_Owner;

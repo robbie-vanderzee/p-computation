@@ -5,6 +5,7 @@
 namespace P {
     enum class Type : unsigned int {
         Undefined = 0,
+        Native = 1,
 
         Identifier, Number,
         Assign, Equality,
@@ -34,30 +35,22 @@ namespace P {
         Block = P::Numerics::Bit(12),
         Forward = P::Numerics::Bit(13),
         Backward = P::Numerics::Bit(14),
-
     };
+
     P::Structure::Concept::Tag as_bitmask(Category);
 
-    class Element {
-      public:
-        Element(std::pair<int, int> position, std::string token, P::Category category, P::Type type) : m_Position(position), m_Category(category), m_Type(type), m_Token(token) {}
+    struct Position {
+        int i, j;
+    };
 
-        constexpr bool member(P::Category category) const {
-            return (m_Category & category) != Category::Undefined;
-        }
+    struct Token {
+        std::string source;
+    };
 
-        constexpr bool match(P::Category category) const {
-            return m_Category == category;
-        }
-
-        constexpr bool match(P::Type type) const {
-            return m_Type == type;
-        }
-
-      private:
-        std::pair<int, int> m_Position;
-        P::Category m_Category;
-        P::Type m_Type;
-        std::string m_Token;
+    struct Element {
+        P::Category category;
+        P::Type type;
+        P::Position position;
+        P::Token token;
     };
 } /* P */
