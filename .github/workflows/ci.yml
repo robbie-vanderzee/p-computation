@@ -21,7 +21,7 @@ jobs:
         path: ~/.cache/bazel
         key: ${{ runner.os }}-${{ env.cache-name }}-${{ github.ref }}
         restore-keys: |
-          ${{ runner.os }}-${{ env.cache-name }}-master
+          ${{ runner.os }}-${{ env.cache-name }}-main
     - name: bazel build
       run: bazel build --config=debug --show_progress_rate_limit=5 --curses=yes --color=yes --terminal_columns=143 --show_timestamps --verbose_failures --jobs=24 --announce_rc //...
     - name: bazel test
