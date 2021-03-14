@@ -63,7 +63,7 @@
    </tr>
 </table>
 
-## Installation
+## Installation <img src="https://img.shields.io/github/workflow/status/robbie-vanderzee/p-computation/P-computation%20Continuous%20Integration?style=for-the-badge" align="right" alt="License badge"/>
 
 *P* is currently only available from source via [Bazel][bazel-build] (v 4.0.0) for multi-platform compilation and scaling. The build is configurable with the following flags:
 
@@ -92,7 +92,7 @@
 
 - `bazel build '...' --config=(debug|release) --config(asan|msan|ubsan|tsan)`
 
-The project will be built to `bazel-bin/pcompuation/`.
+The project will be built to `bazel-bin/{compiler, docs, ...}`.
 
 You may also test the current implementation for your configuration:
 
