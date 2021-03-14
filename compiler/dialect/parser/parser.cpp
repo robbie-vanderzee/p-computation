@@ -10,13 +10,13 @@
 namespace P {
     Parser::Parser(std::filesystem::path owner) : m_Owner(owner) {}
     void Parser::load() {
-        P_ASSERT(!m_Owner.empty(), "Invalid filepath provided to parser: {0} | empty or corrupt.", m_Owner);
+        P_ASSERT_MESSAGE(std::filesystem::exists(m_Owner), "Invalid filepath provided to parser: {0} is empty or corrupt. Location: {1}", m_Owner.filename(), m_Owner);
         std::ifstream source(m_Owner);
         std::string line;
         char c;
         int i = 0, j = 0;
         while (source >> std::noskipws >> c) {
-            if(c != P::Literals::Whitespace[0]) {
+            if (c != P::Literals::Whitespace[0]) {
                 m_Elements.emplace_back(P::Element {
                     .category = P::Category::Undefined,
                     .type = P::Type::Undefined,

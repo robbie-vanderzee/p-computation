@@ -52,6 +52,7 @@ namespace P::Logging {
 #define P_CRITICAL(...)
 #define P_ERROR(...)
 #define P_ASSERT(x, ...)
+#define P_ASSERT_MESSAGE(x, y, ...)
 #define P_WARN(...)
 #define P_INFO(...)
 #define P_TRACE(...)
@@ -67,7 +68,9 @@ namespace P::Logging {
 
 #ifdef LOG_ASSERTIONS
 #undef P_ASSERT
+#undef P_ASSERT_MESSAGE
 #define P_ASSERT(x, ...) { if(!(x)) { P_ERROR("Assertion Failure: {0}", __VA_ARGS__); }}
+#define P_ASSERT_MESSAGE(x, y, ...) { if(!(x)) { P_ERROR("Assertion Failure: " y, __VA_ARGS__); }}
 #endif
 
 #if LOG_LEVEL >= LOG_LEVEL_WARN
