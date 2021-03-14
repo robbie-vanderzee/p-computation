@@ -1,4 +1,4 @@
-# pcomputation::compiler::test::logging
+# pcomputation::compiler::test::utilities::structure
 
 package(
     default_visibility = ["//visibility:public"],
@@ -6,13 +6,13 @@ package(
 )
 
 cc_test(
-    name = "log",
+    name = "structure",
     srcs = [
-        "log.cc",
+        "bitmask.cc",
     ],
     deps = [
         "@gtest",
         "@gtest//:gtest_main",
-        "@pcomputation//compiler/logging:log",
+        "@pcomputation//compiler/utilities/structure:bitmask",
     ],
 )

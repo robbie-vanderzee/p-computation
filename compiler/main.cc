@@ -1,6 +1,7 @@
 #include "compiler/logging/log.hpp"
+#include "compiler/dialect/parser/parser.hpp"
 
-int main(int, char const *[]) {
+int main(int argc, char const * argv[]) {
     P::Logging::Log::initialize({
         .name = "P",
         .log_directory = "logging/test.log",
@@ -9,4 +10,12 @@ int main(int, char const *[]) {
         .threads = 8096,
         .workers = 8,
     });
+    P_ASSERT(argc > 1, "No file provided to compilation.");
+    P_TRACE("Compiler::Dialect::Parse(.file = {0})", argv[1]);
+    P::Parser parser(argv[1]);
+    parser.load();
+    // Parser
+    // Pretty print
+    // Optimization?
+    // Emission
 }

@@ -14,19 +14,22 @@ register_toolchains(
 build --cxxopt=-std=c++20
 build --repo_env=CC=clang++
 
+build:debug --config=assertions
 build:debug --compilation_mode=dbg
 build:debug --cxxopt=-Wall
 build:debug --cxxopt=-Wextra
 build:debug --cxxopt=-Wpedantic
+build:debug --cxxopt=-ULOG_LEVEL
 build:debug --cxxopt=-DLOG_LEVEL=6
-build:debug --cxxopt=-DLOG_ASSERTIONS
 
-
+build:release --config=assertions
 build:release --compilation_mode=opt
 build:release --cxxopt=-Wall
 build:release --cxxopt=-Wextra
 build:release --cxxopt=-Wpedantic
-build:release --cxxopt=-DLOG_LEVEL=1
+
+build:assertions --cxxopt=-DLOG_LEVEL=2
+build:assertions --cxxopt=-DLOG_ASSERTIONS
 
 ###############################################################################
 # Options for building with address sanitizer.

@@ -28,6 +28,41 @@
 
 ## Features
 
+### Implemented
+
+### Unimplemented
+
+<table>
+   <tr>
+      <td>
+         Priority
+      </td>
+      <td>
+         Name
+      </td>
+      <td>
+         Description
+      </td>
+      <td>
+         Challenges
+      </td>
+   </tr>
+   <tr>
+      <td>
+         0
+      </td>
+      <td>
+         P Modules
+      </td>
+      <td>
+         Implement P Modules language to export file structures
+      </td>
+      <td>
+         Requires filesystem management.
+      </td>
+   </tr>
+</table>
+
 ## Installation <img src="https://img.shields.io/github/workflow/status/robbie-vanderzee/p-computation/P-computation%20Continuous%20Integration?style=for-the-badge" align="right" alt="License badge"/>
 
 *P* is currently only available from source via [Bazel][bazel-build] (v 4.0.0) for multi-platform compilation and scaling. The build is configurable with the following flags:
@@ -65,7 +100,7 @@ You may also test the current implementation for your configuration:
 
 - `bazel test '...' --config=(debug|release) --config=(asan|msan|ubsan|tsan)`
 
-To build specific projects (compiler, docs, etc) specify '...' to target directory { "@pcomputation//compiler", "@pcomputation//docs" }.
+To build specific projects (`compiler`, `docs`, `etc`) specify `'...'` to target directory `{` `"@pcomputation//compiler"`, `"@pcomputation//docs"` `}`.
 
 <div align="center">Refer to the platform specific instructions if necessary.</div>
 

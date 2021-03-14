@@ -40,6 +40,10 @@ namespace P::Logging {
 #define LOG_LEVEL_DEBUG    5
 #define LOG_LEVEL_TRACE    6
 
+#ifndef LOG_LEVEL
+#define LOG_LEVEL LOG_LEVEL_NONE
+#endif
+
 #if LOG_LEVEL == LOG_LEVEL_DEBUG
 #undef LOG_LEVEL
 #define LOG_LEVEL LOG_LEVEL_TRACE
