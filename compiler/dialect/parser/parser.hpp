@@ -9,7 +9,7 @@
 #include "compiler/utilities/interface/error.hpp"
 #include "compiler/logging/log.hpp"
 
-namespace P {
+namespace P::Dialect {
     class Parser {
       public:
         class Manager;
@@ -18,7 +18,7 @@ namespace P {
         void load();
 
       private:
-        std::vector<P::Element> m_Elements;
+        std::vector<P::Dialect::Element> m_Elements;
         std::filesystem::path m_Owner;
     };
-} /* P */
+} /* P::Dialect */

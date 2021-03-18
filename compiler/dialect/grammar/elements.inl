@@ -2,7 +2,7 @@
 
 #include "compiler/utilities/structure/bitmask.inl"
 
-namespace P {
+namespace P::Dialect {
     enum class Type : unsigned int {
         Undefined = 0,
         Native = 1,
@@ -48,9 +48,9 @@ namespace P {
     };
 
     struct Element {
-        P::Category category;
-        P::Type type;
-        P::Position position;
-        P::Token token;
+        P::Dialect::Category category;
+        P::Dialect::Type type;
+        P::Dialect::Position position;
+        P::Dialect::Token token;
     };
-} /* P */
+} /* P::Dialect */
