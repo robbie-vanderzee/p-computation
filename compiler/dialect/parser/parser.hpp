@@ -16,6 +16,7 @@ namespace P::Dialect {
       public:
         Parser(std::filesystem::path owner);
         void load();
+        void parse();
 
       private:
         std::vector<P::Dialect::Element> m_Elements;

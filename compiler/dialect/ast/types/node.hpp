@@ -10,10 +10,6 @@ namespace P::Dialect::AST {
       public:
         virtual ~Node() = default;
 
-        virtual void accept(std::shared_ptr<P::Dialect::AST::Visitor> visitor) {
-
-        }
-
         P::Dialect::Position position() {
             return m_Position;
         }
@@ -21,4 +17,4 @@ namespace P::Dialect::AST {
       private:
         P::Dialect::Position m_Position;
     };
-} // namespace P::Dialect::AST
+} /* P::Dialect::AST */

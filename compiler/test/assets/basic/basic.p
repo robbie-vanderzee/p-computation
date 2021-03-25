@@ -1,4 +1,4 @@
 Number main() {
-    Number x = #{ 1 : { 1 } }; // 2
+    Number x = #{ 1 : { 1 } };
     return x;
 }
