@@ -17,8 +17,8 @@ cc_binary(
     copts = [],
     linkopts = ["-pthread"],
     deps = [
-        "@pcomputation//compiler/logging:log",
         "@pcomputation//compiler/dialect/parser",
+        "@pcomputation//compiler/logging:log",
     ],
 )
 

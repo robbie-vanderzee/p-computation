@@ -9,17 +9,19 @@
 #include "compiler/utilities/interface/error.hpp"
 #include "compiler/logging/log.hpp"
 
-namespace P {
+namespace P::Dialect {
     class Parser {
         class Manager;
       public:
-        Parser(std::filesystem::path owner) : m_Owner(owner) {}
+        Parser(std::filesystem::path owner);
 
-        void load() {
-            P_ASSERT(!m_Owner.empty(), "Invalid filepath provided to parser: {0} | empty or corrupt.", m_Owner);
-        }
+        void load();
+        void parse();
+
       private:
-        std::vector<P::Element> m_Elements;
+        std::vector<P::Dialect::Element> m_Elements;
         std::filesystem::path m_Owner;
     };
+
+    P::Dialect::Element element(char c, P::Dialect::Position position);
 } /* P */

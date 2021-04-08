@@ -7,14 +7,15 @@ int main(int argc, char const * argv[]) {
         .log_directory = "logging/test.log",
         .max_log_files = 3,
         .max_log_file_size = 5 * 1024 * 1024,
-        .threads = 8096,
-        .workers = 8,
+        .threads = 1,
+        .workers = 1,
     });
-    P_ASSERT(argc > 1, "No file provided to compilation.");
+    P_ASSERT(argc > 1, "No Compilation target.");
     P_TRACE("Compiler::Dialect::Parse(.file = {0})", argv[1]);
-    P::Parser parser(argv[1]);
+    P::Dialect::Parser parser(argv[1]);
     parser.load();
     // Parser
+    parser.parse();
     // Pretty print
     // Optimization?
     // Emission

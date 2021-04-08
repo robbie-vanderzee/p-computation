@@ -13,3 +13,8 @@ cc_library(
         "@pcomputation//compiler/utilities/structure:bitmask",
     ],
 )
+
+cc_library(
+    name = "literals",
+    hdrs = ["literals.inl"],
+)

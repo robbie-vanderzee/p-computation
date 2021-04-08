@@ -1,0 +1,13 @@
+# pcomputation::compiler::test::assets::basic
+
+package(
+    default_visibility = ["//visibility:public"],
+    licenses = ["notice"],
+)
+
+filegroup(
+    name = "basic",
+    srcs = [
+        "lambda.p",
+    ],
+)
